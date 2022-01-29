@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UnitConverter</title>
+	<link rel="stylesheet" type="text/css" href="Converterc.css">
+	<script type="text/javascript" src="Converterj.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+	<div class="maintitle">UNIT CONVERTER</div>
+	<div class="container">
+		<div class="col3">
+			<div class="title2">Units</div>
+			<div class="col2">
+				<button id="0" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: #ADFF2F"><i class="fas fa-ruler fa-3x" style="color: green;"></i></button>
+				<button id="1" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: #FFA500"><i class="fa fa-thermometer-full fa-3x" style="color: blue;"></i></button>
+				<button id="2" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: #FFB6C1"><i class="fas fa-weight fa-3x" style="color: purple;"></i></button>
+			</div>
+			<div class="col2">
+				<button id="3" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: #FFFF00"><i class="fas fa-shapes fa-3x" style="color: #808000;"></i></button>
+				<button id="4" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: #B0E0E6"><i class="fa fa-clock-o fa-3x" style="color: #0000FF;"></i></button> 
+				<button id="5" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: #F08080"><i class="fa fa-bolt fa-3x" style="color: #FF0000;"></i></button>
+			</div>
+			<div class="col2">
+				<button id="6" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: #ADFF2F; "><i class="fa fa-superscript fa-3x" style="color: orange;"></i></button>
+				<button id="7" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: purple"><i class="fa fa-money fa-3x" style="color: #00FF00;"></i></button>
+				<button id="8" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: #DC143C"><i class="fa fa-cube fa-3x" style="color: #FF4500;"></i></button>
+			</div>
+			<div class="col2">
+				<button id="9" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: purple"><i class="fa fa-archive fa-3x" style="color: #00FF00;"></i></button>
+				<button id="10" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: #00FFFF"><i class="fa fa-picture-o fa-3x" style="color: #008080;"></i></button>
+				<button id="11" onclick="UpdateUnitMenu(this.id, document.form_A.unit_type);UpdateUnitMenu(this.id, document.form_B.unit_type)" style="background-color: blue"><i class="fa fa-volume-up fa-3x" style="color: #FFD700;"></i></button>
+			</div>
+		</div>
+		<div class="col1">
+			<div class="title2" id="Unittitle"></div>
+			<form name="form_A" onSubmit="return false" style="padding-left: 40px;">
+				<input type="text" id="unit_input" class="numbersonly" maxlength="20" value="0" onKeyUp="document.form_B.unit_input.value=0">
+				<br>
+		         <select name="unit_type" onchange="document.form_A.unit_input.value=0;document.form_B.unit_input.value=0"></select>	 
+    		</form>
+			<form name="form_B" onSubmit="return false" style="padding-left: 40px;">
+				<input type="text" id="unit_input" class="numbersonly" maxlength="20" value="0" onKeyUp="document.form_A.unit_input.value=0">
+				<br>
+		        <select name="unit_type" onchange="document.form_B.unit_input.value=0;document.form_A.unit_input.value=0"></select>	        		
+    		</form>
+    		<button onclick="convert(document.form_A, document.form_B)" class="btn">Convert it</button>
+    	</div>
+    </div>
+</body>
+</html>
+<!-- onKeyUp="CalculateUnit(document.form_A, document.form_B)" -->
+<!-- onChange="CalculateUnit(document.form_B, document.form_A)" -->
+<!-- onKeyUp="CalculateUnit(document.form_B, document.form_A)" -->
+<!-- onChange="CalculateUnit(document.form_A, document.form_B)" -->
